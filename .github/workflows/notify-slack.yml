@@ -14,7 +14,7 @@ jobs:
         with:
           payload: |
             {
-              "text": "PRにラベルが付けられました！\n${{ github.event.pull_request.title }}"
+              "text": "@here\n依頼者：${{ github.event.pull_request.user.login }}\nリポジトリ：${{ github.repository }}\nタイトル：${{ github.event.pull_request.title }}\nレビューお願いします。\n${{ github.event.pull_request.html_url }}"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
