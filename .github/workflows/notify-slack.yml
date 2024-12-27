@@ -14,7 +14,12 @@ jobs:
         with:
           payload: |
             {
-              "text": "<!here>\n依頼者：${{ github.event.pull_request.user.login }}\nリポジトリ：${{ github.event.repository.name }}\nタイトル：${{ github.event.pull_request.title }}\nレビューお願いします。\n${{ github.event.pull_request.html_url }}",
+              "text": "<!here>\n
+              依頼者：${{ github.event.pull_request.user.login }}\n
+              リポジトリ：${{ github.event.repository.name }}\n
+              タイトル：${{ github.event.pull_request.title }}\n
+              レビューお願いします。\n
+              ${{ github.event.pull_request.html_url }}",
               "link_names": 1
             }
         env:
